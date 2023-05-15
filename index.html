@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="add()">add</button>
+    <script>
+        function promptUser(question) {
+            return prompt(question);
+        }
+        function add() {
+
+            function addUser() {
+                var firstName = promptUser("Enter your First Name:");
+                var lastName = promptUser("Enter your Last Name:");
+                var age = promptUser("Enter your Age:");
+
+                var user = {
+                    firstName: firstName,
+                    lastName: lastName,
+                    age: age,
+                };
+
+                users.push(user);
+            }
+            var length = parseInt(prompt("Enter the length of the array:"));
+            var users = [];
+
+            for (var i = 0; i < length; i++) {
+                addUser();
+            }
+
+            console.log(users);
+        }
+    </script>
+</body>
+
+</html>
